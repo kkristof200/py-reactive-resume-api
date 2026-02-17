@@ -1,32 +1,8 @@
-[build-system]
-requires = ["setuptools>=45", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "reactiveresume"
-version = "0.1.1"
-authors = []
-description = "A Python library for Reactive Resume API"
+version = "0.1.2"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
     "httpx"
 ]
-classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: MacOS",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-]
-
-[tool.setuptools]
-packages = ["reactiveresume"]
-
-[tool.setuptools.package-dir]
-reactiveresume = "src"
