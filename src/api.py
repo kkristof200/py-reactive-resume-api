@@ -116,15 +116,21 @@ class ReactiveResumeAPI:
         response.raise_for_status()
         dest_path = Path(destination)
         dest_path.write_bytes(response.content)
+
         return dest_path
 
     def resume_json_to_pdf(
         self,
         resume_json: dict[str, Any],
-        resume_path: Union[Path, str]
+        resume_path: Union[Path, str],
+        cleanup: bool = True
     ) -> Path:
         import_response = self.import_resume(resume_json)
         resume_id = import_response["id"]
         export_response = self.export_resume(resume_id)
         self.download_pdf(export_response, resume_path)
+
+        if cleanup:
+            self.delete_resume(resume_id)
+
         return Path(resume_path)

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "reactiveresume"
-version = "0.1.0"
+version = "0.1.1"
 authors = []
 description = "A Python library for Reactive Resume API"
 readme = "README.md"
@@ -29,4 +29,4 @@ classifiers = [
 packages = ["reactiveresume"]
 
 [tool.setuptools.package-dir]
-imgai = "src"
+reactiveresume = "src"
